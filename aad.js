@@ -22,7 +22,8 @@
 			login: function(p) {
 				if (p.qs.response_type === 'code') {
 					// Let's set this to an offline access to return a refresh_token
-					p.qs.access_type = 'offline_access';
+					// Refresh tokens are highly discouraged in SPA's
+					// p.qs.access_type = 'offline_access';
 				}
 			},
 
